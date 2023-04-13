@@ -15,9 +15,9 @@
 - 두 공격수의 득점이 동일하다면, '무승부입니다'를 출력한다.
 
 ### 기능 구현목록
--[ ] 공격수 2명(attacker1, attacker2)을 ArrayList로 선언을 한다.
--[ ] 골키퍼(goalkeeper)을 ArrayList로 선언을 한다.
--[ ] 공을 입력받을땐 스트링 메서드 strim과 replace로 배열로 만든 후에 ArrayList로 매핑을 하여서 공격수에게 할당한다.
+-[ ] 공격수 2명(attacker1, attacker2)을 ArrayList<String>로 선언을 한다.
+-[ ] 골키퍼(goalkeeper)을 ArrayList<String>로 선언을 한다.
+r
 배열을 ArrayList로 만드는 방법은 다음과 같다.
 ```java
         String[] array = {"value1", "value2"};
@@ -31,6 +31,9 @@
 - [ ] 공격수와 골키퍼의 공을 비교한다.
 - [ ] 결과를 출력한다.
 
+### 콘솔
+<img src="https://cdn.discordapp.com/attachments/979610207074258956/1096023009648726066/KakaoTalk_20230413_194333299.png" width="50%" height="50%">
+
 ### 프로그래밍 요구사항 
 - 기능을 하나 구현하면 구현한 기능을 설명하는 한 줄의 커밋을 한다.
 
@@ -38,5 +41,6 @@
 ### 미션을 진행하는 법
 1. Repository를 fork한다.
 2. 자신의 깃허브 이름으로 branch를 생성한다.
+3. 기능 요구사항을 보고, 기능을 구현할 때 마크다운에 체크를 한다.
 3. 모두 구현한 후 pull request를 요청한다.
 4. 코드리뷰 후 개선한다.
