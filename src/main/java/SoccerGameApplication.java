@@ -39,7 +39,7 @@ SoccerGameApplication {
             a2_list.add(valueString[i]);
         }
 
-        System.out.println("attacker3의 공을 입력해주십시오.");
+        System.out.println("goalkeeper의 공을 입력해주십시오.");
         value = sc.next();
         valueString = value.split(",");
 
