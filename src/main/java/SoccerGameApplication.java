@@ -48,7 +48,25 @@ SoccerGameApplication {
             g_list.add(valueString[i]);
         }
 
+        int cnt1 = 0, cnt2 = 0;
+        int numberI, numberJ, numberK;
+        for (String i : g_list){
+            numberI = Integer.parseInt(i);
+            for (String j : a1_list){
+                numberJ = Integer.parseInt(j);
+                if (numberI == numberJ){
+                    cnt1 += 1;
+                }
+            }
+            for (String k : a2_list){
+                numberK = Integer.parseInt(k);
+                if (numberI == numberK){
+                    cnt2 += 1;
+                }
+            }
+        }
 
+        
         sc.close();
     }
 }
