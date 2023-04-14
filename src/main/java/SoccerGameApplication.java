@@ -66,7 +66,16 @@ SoccerGameApplication {
             }
         }
 
-        
+        if (cnt1 < cnt2){
+            System.out.println("attack1이 승리하였습니다.");
+        }
+        else if(cnt1 == cnt2){
+            System.out.println("무승부입니다.");
+        }
+        else{
+            System.out.println("attack2이 승리하였습니다.");
+        }
+
         sc.close();
     }
 }
