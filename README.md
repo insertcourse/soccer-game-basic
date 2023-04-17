@@ -16,8 +16,8 @@
 
 ### 기능 구현목록
 
-- [+] 공격수 2명(attacker1, attacker2)을 ArrayList<String>로 선언을 한다.
-- [+] 골키퍼(goalkeeper)을 ArrayList<String>로 선언을 한다.
+- [x] 공격수 2명(attacker1, attacker2)을 ArrayList<String>로 선언을 한다.
+- [x] 골키퍼(goalkeeper)을 ArrayList<String>로 선언을 한다.
   - 배열을 ArrayList로 만드는 방법은 다음과 같다.
 ```java
         String[] array = {"value1", "value2"};
@@ -25,11 +25,11 @@
         ArrayList<String> arrayList = Arrays.stream(array)
                 .collect(Collectors.toCollection(ArrayList::new));
 ```
-- [+] 공격수 두 명의 공을 입력받는다.
+- [x] 공격수 두 명의 공을 입력받는다.
   - 간편함을 위해 공을 검증하진 않는다.
-- [+] 골키퍼가 막을 수 있는 공을 입력받는다.
-- [+] 공격수와 골키퍼의 공을 비교한다.
-- [+] 결과를 출력한다.
+- [x] 골키퍼가 막을 수 있는 공을 입력받는다.
+- [x] 공격수와 골키퍼의 공을 비교한다.
+- [x] 결과를 출력한다.
 
 ### 콘솔
 <img src="https://cdn.discordapp.com/attachments/979610207074258956/1096023009648726066/KakaoTalk_20230413_194333299.png" width="50%" height="50%">
