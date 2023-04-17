@@ -6,52 +6,44 @@ import java.util.stream.Collectors;
 
 public class SoccerGameApplication {
     public static void main(String[] args) {
-        ArrayList<String> attacker1 = new ArrayList<String>();
+        ArrayList<String> attacker1 = new ArrayList<>();
 
-        ArrayList<String> attacker2 = new ArrayList<String>();
+        ArrayList<String> attacker2 = new ArrayList<>();
 
-        ArrayList<String> goalkeeper = new ArrayList<String>();
+        ArrayList<String> goalkeeper = new ArrayList<>();
 
         Scanner sc = new Scanner(System.in);
-        String[] valueString;
         
 
         System.out.println("attacker1의 공을 입력해주십시오.");
-        String value = sc.next();
-        valueString = value.split(",");
+        String[] valueString = sc.next().split(",");
 
         attacker1 = Arrays.stream(valueString)
                         .collect(Collectors.toCollection(ArrayList::new));
 
         System.out.println("attacker2의 공을 입력해주십시오.");
-        value = sc.next();
-        valueString = value.split(",");
+        valueString = sc.next().split(",");
 
         attacker2 = Arrays.stream(valueString)
                         .collect(Collectors.toCollection(ArrayList::new));
 
         System.out.println("goalkeeper의 공을 입력해주십시오.");
-        value = sc.next();
-        valueString = value.split(",");
+        valueString = sc.next().split(",");
 
         goalkeeper = Arrays.stream(valueString)
                 .collect(Collectors.toCollection(ArrayList::new));
 
         int cnt1 = 0, cnt2 = 0;
         for (String i : goalkeeper){
-            for (String j : attacker1){
-                if (Integer.parseInt(i) == Integer.parseInt(j)){
-                    cnt1++;
-                }
+            if (attacker1.indexOf(i) == -1){
+                cnt1++;
             }
-            for (String k : attacker2){
-                if (Integer.parseInt(i) == Integer.parseInt(k)){
-                    cnt2++;
-                }
+            if (attacker2.indexOf(i) == -1){
+                cnt2++;
             }
         }
 
-        if (cnt1 < cnt2){
+        if (cnt1 > cnt2){
             System.out.println("attacker1이 승리하였습니다.");
         }
         else if(cnt1 == cnt2){
