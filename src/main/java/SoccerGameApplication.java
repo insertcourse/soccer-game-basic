@@ -32,6 +32,7 @@ public class SoccerGameApplication {
         }
 
         if(attacker1Score > attacker2Score) System.out.println("attacker1이 승리하였습니다.");
+        else if(attacker1Score == attacker2Score) System.out.println("비겼습니다.");
         else System.out.println("attacker2이 승리하였습니다.");
     }
 }
