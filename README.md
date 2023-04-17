@@ -17,7 +17,7 @@
 ### 기능 구현목록
 
 - [X] 공격수 2명(attacker1, attacker2)을 ArrayList<String>로 선언을 한다.
-- [ ] 골키퍼(goalkeeper)을 ArrayList<String>로 선언을 한다.
+- [X] 골키퍼(goalkeeper)을 ArrayList<String>로 선언을 한다.
   - 배열을 ArrayList로 만드는 방법은 다음과 같다.
 ```java
         String[] array = {"value1", "value2"};
