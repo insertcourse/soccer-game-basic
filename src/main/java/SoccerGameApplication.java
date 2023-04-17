@@ -6,10 +6,12 @@ import java.util.stream.Collectors;
 
 public class SoccerGameApplication {
     public static void main(String[] args) {
-        final ArrayList<String> attacker1;
-        final ArrayList<String> attacker2;
+        int attacker1Score = 0;
+        int attacker2Score = 0;
+        ArrayList<String> attacker1 = new ArrayList<String>();
+        ArrayList<String> attacker2 = new ArrayList<String>();
 
-        final ArrayList<String> goalkeeper;
+        ArrayList<String> goalkeeper = new ArrayList<String>();
         Scanner sc = new Scanner(System.in);
 
         System.out.println("attacker1의 공을 입력해주십시오.");
@@ -24,10 +26,12 @@ public class SoccerGameApplication {
         goalkeeper = new ArrayList(Arrays.stream(sc.next().split(","))
                 .collect(Collectors.toCollection(ArrayList::new)));
 
-        attacker1.removeAll(goalkeeper);
-        attacker2.removeAll(goalkeeper);
+        for(String ball : goalkeeper){
+            if(attacker1.indexOf(ball) == -1) attacker1Score++;
+            if(attacker2.indexOf(ball) == -1) attacker2Score++;
+        }
 
-        if(attacker1.size() > attacker2.size()) System.out.println("attacker1이 승리하였습니다.");
+        if(attacker1Score > attacker2Score) System.out.println("attacker1이 승리하였습니다.");
         else System.out.println("attacker2이 승리하였습니다.");
     }
 }
