@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 
 public class SoccerGameApplication {
     public static void main(String[] args) {
+        int attacker1_cnt = 0,attacker2_cnt = 0;
         ArrayList<String> attacker1;
         ArrayList<String> attacker2;
         ArrayList<String> goalkeeper;
@@ -14,6 +15,15 @@ public class SoccerGameApplication {
         attacker1 = getPlayer("attacker1",sc);
         attacker2 = getPlayer("attacker2",sc);
         goalkeeper = getPlayer("goalkeeper",sc);
+
+        for (String i : goalkeeper) {
+            if(attacker1.contains(i)) {
+                attacker1_cnt += 1;
+            }
+            if(attacker2.contains(i)) {
+                attacker2_cnt += 1;
+            }
+        }
     }
 
     public static ArrayList<String> getPlayer(String player,Scanner sc) {
