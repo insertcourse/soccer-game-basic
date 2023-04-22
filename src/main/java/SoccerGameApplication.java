@@ -25,9 +25,9 @@ public class SoccerGameApplication {
             }
         }
 
-        if(attacker1_cnt > attacker2_cnt) {
+        if(!(attacker1_cnt <= attacker2_cnt)) {
             System.out.println("attacker2이 승리하였습니다.");
-        } else if(attacker1_cnt < attacker2_cnt) {
+        } else if(!(attacker1_cnt >= attacker2_cnt)) {
             System.out.println("attacker1이 승리하였습니다.");
         } else {
             System.out.println("무승부입니다.");
