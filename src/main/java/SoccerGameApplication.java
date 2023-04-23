@@ -17,18 +17,18 @@ public class SoccerGameApplication {
         goalkeeper = getPlayer("goalkeeper",sc);
 
         for (String i : goalkeeper) {
-            if(attacker1.contains(i)) {
+            if(!attacker1.contains(i)) {
                 attacker1_cnt += 1;
             }
-            if(attacker2.contains(i)) {
+            if(!attacker2.contains(i)) {
                 attacker2_cnt += 1;
             }
         }
 
-        if(!(attacker1_cnt <= attacker2_cnt)) {
-            System.out.println("attacker2이 승리하였습니다.");
-        } else if(!(attacker1_cnt >= attacker2_cnt)) {
+        if(attacker1_cnt > attacker2_cnt) {
             System.out.println("attacker1이 승리하였습니다.");
+        } else if(attacker1_cnt < attacker2_cnt) {
+            System.out.println("attacker2이 승리하였습니다.");
         } else {
             System.out.println("무승부입니다.");
         }
